@@ -1,0 +1,7 @@
+# Windows reserved device names (Git cannot add these)
+nul
+con
+prn
+aux
+com1
+lpt1

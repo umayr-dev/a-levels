@@ -1,0 +1,262 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', Bebas, sans-serif;
+  background-color: #EFEFEF;
+  position: relative;
+  min-height: 100vh;
+  transition: opacity ease-in 0.2s;
+}
+
+body[unresolved] {
+  opacity: 0;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.mobile-event-header {
+  padding: 0 10px;
+}
+
+.mobile-event-container {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6.6px 0px #00000026;
+  border-radius: 4px 4px 20px 20px;
+  margin: 0 auto 36px;
+}
+
+.mobile-event-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-event-date {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.mobile-event-time {
+  color: #3477FF;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+/* Main */
+.mobile-main-content {
+  text-align: center;
+  padding-bottom: 58px;
+}
+
+.mobile-content-wrapper {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.mobile-main-title {
+  font-family: Bebas, sans-serif;
+  color: black;
+  font-weight: 700;
+  line-height: 110%;
+  font-size: clamp(26px, 8.1vw, 35px);
+  max-width: 450px;
+  margin: 0 auto 6px;
+  text-transform: uppercase;
+}
+
+.mobile-main-title span {
+  color: #3477FF;
+}
+
+.mobile-content-img {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mobile-hero-shadow {
+  position: absolute;
+  width: 176px;
+  height: 180px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(141.42deg, #3477FF 13.97%, #D9E0EE 36.56%, #3477FF 54.64%, #ADC8FF 78.05%, #3477FF 99.41%);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.mobile-hero-image {
+  display: inline-flex;
+  max-width: 261px;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -60px;
+}
+
+.mobile-cta-button {
+  width: 100%;
+  min-height: 71px;
+  padding: 17px 20px;
+  background-color: #3477FF;
+  box-shadow: 0px 5px 0px 0px #0445C8;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  margin: 0 auto 30px !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  max-width: 338px;
+}
+
+/* Bonus section (optional block) */
+.mobile-bonus-section {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 14px;
+  background-color: #fff;
+  border: 1px solid #BCBCBC;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.mobile-bonus-text {
+  color: black;
+  font-size: 11px;
+  line-height: 180%;
+}
+
+.mobile-bonus-text .highlight {
+  font-weight: 500;
+}
+
+/* Benefits */
+.mobile-masterclass-title {
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 100%;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.mobile-benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 20px;
+  max-width: 338px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-benefit-item {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-benefit-item img {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-benefit-text {
+  color: black;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.mobile-benefit-text span {
+  color: #3477FF;
+}
+
+.mobile-benefit-text .highlight {
+  color: #841EBF;
+}
+
+.blur-up {
+  filter: blur(10px);
+  transition: filter 0.4s ease-out;
+}
+
+@media (max-width: 525px) {
+  .mobile-cta-button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-hero-image {
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: -50px;
+  }
+}
+
+@media (min-width: 570px) {
+  .mobile-cta-button {
+    width: 100%;
+    margin: 0 auto 11px;
+  }
+  .mobile-bonus-section {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 18px;
+  }
+  .mobile-masterclass-info {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 439px) {
+  .mobile-event-date {
+    font-size: 16px;
+  }
+  .mobile-event-time {
+    font-size: 18px;
+  }
+  .mobile-benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .mobile-bonus-text {
+    font-size: 10px;
+  }
+  .mobile-event-container {
+    padding: 14px 32px;
+    margin-bottom: 15px;
+  }
+}
