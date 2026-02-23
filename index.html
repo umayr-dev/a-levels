@@ -12,6 +12,23 @@
   </style>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/modal.css" media="all">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1705283677574086');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1705283677574086&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
   <div class="mobile-event-header">
@@ -67,6 +84,15 @@
           img.src = bigSrc;
           img.classList.remove('blur-up');
         };
+      }
+      // Meta Pixel: CTA bosilganda (Telegramga o'tish) hodisasini yuborish
+      var ctaLinks = document.querySelectorAll('a.mobile-cta-button[href*="t.me"]');
+      for (var i = 0; i < ctaLinks.length; i++) {
+        ctaLinks[i].addEventListener('click', function () {
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead');
+          }
+        });
       }
     })();
   </script>
